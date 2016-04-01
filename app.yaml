@@ -1,11 +1,16 @@
-application: hello-cloud-1268
 runtime: python
 api_version: 1
+threadsafe: true
 
 handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  
 - url: /.*
   script: main.app
 
 libraries:
 - name: webapp2
+  version: latest
+- name: jinja2
   version: latest
