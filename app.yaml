@@ -4,7 +4,7 @@ api_version: 1
 
 handlers:
 - url: /.*
-  script: hello-cloud.app
+  script: main.py
 
 libraries:
 - name: webapp2
