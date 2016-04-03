@@ -1,10 +1,10 @@
-import webapp2
+from flask import Flask, render_template 
 
-class MainPage(webapp2.RequestHandler):
-    def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, World!')
+app = Flask(__name__) 
+@app.route('/')
 
-app = webapp2.WSGIApplication([
-    ('/', MainPage),
-], debug=True)
+def home():
+    return render_template("index.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)
