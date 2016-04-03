@@ -7,11 +7,12 @@ class MainPage(webapp2.RequestHandler):
     self.response.headers['Content-Type'] = 'text/plain'
     
     # create output string
-    output = "Current time: {{ timeobj.strftime('%H:%M') }}"
+    #output = "Current time: {{ timeobj.strftime('%H:%M') }}"
 
     # put output string into jinja
-    jOutput = jinja2.Template(output)
-    self.response.write(jOutput.render(timeobj = time))
+    #jOutput = jinja2.Template(output)
+    # jOutput.render(timeobj = time)
+    self.response.write("Hello Cloud")
 
 app = webapp2.WSGIApplication([
   ('/', MainPage),
