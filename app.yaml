@@ -1,4 +1,3 @@
-application: hello-cloud-1268
 version: 2
 runtime: python27
 api_version: 1
@@ -6,7 +5,7 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: hellocloud.py
+  script: hellocloud.app
 
 libraries:
 - name: jinja2
