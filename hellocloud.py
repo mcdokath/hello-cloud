@@ -1,4 +1,10 @@
-from jinja2 import Environment, PackageLoader
+import time
+import jinja2
 
-env = Environment(loader=PackageLoader("templates"))
-template = env.get_template("index.html")
+# create output string
+output = "Current time: {{ timeobj.strftime('%H:%M') }}"
+print(output)
+
+# put output string into jinja
+jOutput = jinja2.Template(output)
+print(jOutput.render(timeobj = time))
