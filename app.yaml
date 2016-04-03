@@ -6,7 +6,7 @@ threadsafe: true
 
 handlers:
 - url: /.*
-  script: hellocloud.app
+  script: hellocloud.py
 
 libraries:
 - name: jinja2
